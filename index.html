@@ -6,11 +6,9 @@
   <meta name="description" content="اكتشف الجزائر - وكالة سياحة فاخرة تقدم تجارب استثنائية وخدمات راقية في أروع الوجهات السياحية">
   <meta name="theme-color" content="#0a1929">
   <meta name="keywords" content="سياحة, الجزائر, حجز, رحلات, فندق, صحراء, شواطئ">
-  
   <meta property="og:title" content="اكتشف الجزائر | وكالة سياحة فاخرة">
   <meta property="og:description" content="رحلات استثنائية مصممة خصيصاً لك بأعلى معايير الفخامة">
   <meta property="og:type" content="website">
-  
   <title>اكتشف الجزائر | وكالة سياحة فاخرة</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +46,6 @@
       --success: #30d158;
       --error: #ff3b30;
       
-      /* Light mode background */
       --bg-base: #f5f5f7;
       --bg-glow-1: rgba(0, 113, 227, 0.08);
       --bg-glow-2: rgba(212, 175, 55, 0.06);
@@ -68,9 +65,6 @@
       --input-bg: #ffffff;
     }
 
-    /* ========================================
-       CSS Variables - Dark Mode (الوضع الليلي المبهر)
-       ======================================== */
     .dark-mode {
       --apple-blue: #4facfe;
       --apple-green: #30d158;
@@ -85,7 +79,6 @@
       --apple-shadow: 0 4px 20px rgba(0,0,0,0.3);
       --apple-shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
       
-      /* Dark mode background - أزرق ليلي مبهر */
       --bg-base: #0a0a1a;
       --bg-glow-1: rgba(33, 150, 243, 0.2);
       --bg-glow-2: rgba(79, 172, 254, 0.15);
@@ -105,9 +98,6 @@
       --input-bg: rgba(15, 20, 40, 0.6);
     }
 
-    /* ========================================
-       Global Reset
-       ======================================== */
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
@@ -130,9 +120,6 @@
     ::-webkit-scrollbar-track { background:transparent; }
     ::-webkit-scrollbar-thumb { background:var(--apple-gray); border-radius:4px; }
 
-    /* ========================================
-       خلفية الوضع الفاتح
-       ======================================== */
     .bg-light {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       opacity: 1; transition: opacity 0.8s ease;
@@ -143,22 +130,17 @@
     }
     .dark-mode .bg-light { opacity: 0; }
 
-    /* ========================================
-       خلفية الوضع الليلي المبهرة
-       ======================================== */
     .bg-dark-aurora {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       opacity: 0; transition: opacity 0.8s ease;
     }
     .dark-mode .bg-dark-aurora { opacity: 1; }
 
-    /* طبقة القاعدة - أزرق داكن */
     .dark-base {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background: radial-gradient(ellipse at 50% 50%, #0d1b2a 0%, #0a0a1a 100%);
     }
 
-    /* هالة زرقاء كبيرة */
     .dark-glow-1 {
       position: fixed; width: 900px; height: 900px; border-radius: 50%;
       background: radial-gradient(circle, rgba(33, 150, 243, 0.2) 0%, rgba(79, 172, 254, 0.1) 30%, transparent 70%);
@@ -167,7 +149,6 @@
       z-index: 0; pointer-events: none;
     }
 
-    /* هالة زرقاء فاتحة */
     .dark-glow-2 {
       position: fixed; width: 700px; height: 700px; border-radius: 50%;
       background: radial-gradient(circle, rgba(79, 172, 254, 0.25) 0%, rgba(126, 200, 248, 0.1) 40%, transparent 70%);
@@ -176,7 +157,6 @@
       z-index: 0; pointer-events: none;
     }
 
-    /* هالة أرجوانية */
     .dark-glow-3 {
       position: fixed; width: 500px; height: 500px; border-radius: 50%;
       background: radial-gradient(circle, rgba(94, 92, 230, 0.15) 0%, rgba(120, 100, 255, 0.08) 40%, transparent 70%);
@@ -185,7 +165,6 @@
       z-index: 0; pointer-events: none;
     }
 
-    /* هالة ذهبية صغيرة */
     .dark-glow-4 {
       position: fixed; width: 350px; height: 350px; border-radius: 50%;
       background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(240, 214, 138, 0.05) 40%, transparent 70%);
@@ -215,7 +194,6 @@
       50% { transform: translate(90px, 60px) scale(1.5); }
     }
 
-    /* نجوم متلألئة */
     .dark-stars {
       position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
     }
@@ -247,7 +225,6 @@
       75% { opacity: 1; transform: scale(1.5); }
     }
 
-    /* شهب */
     .shooting-star {
       position: fixed; width: 2px; height: 2px;
       background: #fff;
@@ -273,7 +250,6 @@
       100% { transform: translateX(-300px) translateY(300px) rotate(-35deg); opacity: 0; }
     }
 
-    /* شبكة زرقاء */
     .dark-grid {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       opacity: var(--grid-opacity);
@@ -283,15 +259,11 @@
       background-size: 80px 80px;
     }
 
-    /* vignette */
     .dark-vignette {
       position: fixed; inset: 0; z-index: 0; pointer-events: none;
       background: radial-gradient(ellipse at center, transparent 50%, rgba(5, 5, 20, 0.7) 100%);
     }
 
-    /* ========================================
-       شاشة التحميل
-       ======================================== */
     .preloader {
       position:fixed; inset:0; z-index:10000;
       background:#0a0a1a;
@@ -326,9 +298,6 @@
     @keyframes spin { to { transform:rotate(360deg); } }
     @keyframes pulse { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
 
-    /* ========================================
-       أزرار عائمة
-       ======================================== */
     .floating-buttons {
       position:fixed; bottom:30px; left:30px; z-index:999;
       display:flex; flex-direction:column; gap:12px;
@@ -346,7 +315,6 @@
     .float-btn:hover { transform:scale(1.15); box-shadow:var(--apple-shadow-lg); }
     #backToTop { display:none; }
 
-    /* زر الوضع الليلي بتأثير خاص */
     #themeSwitch {
       position: relative;
       overflow: hidden;
@@ -382,16 +350,10 @@
       50% { transform: scale(1.2); }
     }
 
-    /* ========================================
-       نظام الصفحات
-       ======================================== */
     .page { display:none; animation:fadeIn 0.6s ease; }
     .page.active { display:block; }
     @keyframes fadeIn { from { opacity:0; transform:translateY(25px); } to { opacity:1; transform:translateY(0); } }
 
-    /* ========================================
-       الهيدر
-       ======================================== */
     .header {
       position:fixed; top:16px; left:50%; transform:translateX(-50%); width:92%; max-width:1300px; z-index:100;
       border-radius:60px; padding:14px 28px;
@@ -443,9 +405,6 @@
     .menu-toggle.active span:nth-child(2) { opacity:0; }
     .menu-toggle.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
 
-    /* ========================================
-       البطاقات والأزرار
-       ======================================== */
     .glass-card {
       background:var(--card-bg); backdrop-filter:blur(25px);
       -webkit-backdrop-filter:blur(25px);
@@ -501,9 +460,6 @@
     .btn-apple-lg { padding:16px 32px; font-size:1.05rem; }
     .btn-full { width:100%; justify-content:center; }
 
-    /* ========================================
-       الهيرو
-       ======================================== */
     .hero {
       min-height:100vh; display:flex; align-items:center; justify-content:center;
       text-align:center; padding:140px 24px 70px; position:relative; z-index:1;
@@ -551,9 +507,6 @@
     }
     @keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 
-    /* ========================================
-       العدادت
-       ======================================== */
     .stats-section {
       display:grid; grid-template-columns:repeat(4, 1fr);
       gap:24px; max-width:1000px; margin:0 auto; padding:60px 24px;
@@ -569,9 +522,6 @@
     .dark-mode .stat-number { text-shadow: 0 0 25px rgba(79, 172, 254, 0.5); }
     .stat-label { font-size:0.95rem; color:var(--text-secondary); margin-top:8px; }
 
-    /* ========================================
-       الأقسام
-       ======================================== */
     .section { padding:80px 24px; max-width:1200px; margin:0 auto; position:relative; z-index:1; }
     .section-dark {
       background:var(--section-dark-bg); margin:0; max-width:100%;
@@ -607,9 +557,6 @@
     .feature-card h3 { font-size:1.3rem; margin-bottom:10px; color:var(--text-white); }
     .feature-card p { color:var(--text-secondary); font-size:0.95rem; }
 
-    /* ========================================
-       الوجهات
-       ======================================== */
     .destinations-scroll { overflow-x:auto; padding:24px 0; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
     .destinations-scroll::-webkit-scrollbar { display:none; }
     .destinations-track { display:flex; gap:24px; padding:0 24px; }
@@ -638,9 +585,6 @@
     .dest-card-info h3 { font-size:1.3rem; margin-bottom:4px; }
     .dest-card-info .rating { color:var(--star-color); }
 
-    /* ========================================
-       البحث
-       ======================================== */
     .search-container { max-width:700px; margin:0 auto 40px; position:relative; z-index:1; }
     .search-input-wrapper {
       position:relative; display:flex; align-items:center;
@@ -675,9 +619,6 @@
     .suggestion-item:hover { background:rgba(128,128,128,0.15); }
     .suggestion-item i { color:var(--apple-blue); }
 
-    /* ========================================
-       صفحات داخلية
-       ======================================== */
     .page-content { padding:140px 24px 70px; max-width:1200px; margin:0 auto; position:relative; z-index:1; }
     .page-title { font-size:3.5rem; font-weight:900; letter-spacing:-1.5px; text-align:center; margin-bottom:16px; color:var(--text-white); }
     .page-breadcrumb { text-align:center; color:var(--text-secondary); margin-bottom:48px; font-size:0.95rem; }
@@ -733,9 +674,6 @@
     .form-input:focus { outline:none; border-color:var(--apple-blue); }
     .dark-mode .form-input:focus { box-shadow:0 0 0 4px rgba(79,172,254,0.1); }
 
-    /* ========================================
-       المعرض
-       ======================================== */
     .carousel-container { position:relative; z-index:1; height:85vh; overflow:hidden; margin-top:-20px; background:transparent; }
     .carousel { position:relative; height:100%; width:100%; }
     .carousel-item {
@@ -778,9 +716,6 @@
     .dark-mode .carousel-item .num { text-shadow: 0 0 30px rgba(79,172,254,0.6); }
     .carousel-item img { width:100%; height:100%; object-fit:cover; pointer-events:none; }
 
-    /* ========================================
-       آراء العملاء
-       ======================================== */
     .testimonials-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:24px; }
     .testimonial-card { padding:32px; }
     .testimonial-header { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
@@ -795,9 +730,6 @@
     .testimonial-text { color:var(--text-secondary); font-style:italic; }
     .testimonial-card strong { color:var(--text-white); }
 
-    /* ========================================
-       النوافذ المنبثقة
-       ======================================== */
     .modal {
       position:fixed; inset:0; z-index:1000;
       display:flex; align-items:flex-end; justify-content:center;
@@ -830,9 +762,6 @@
     .booking-success p { color:var(--text-secondary); }
     .modal h2 { color:var(--text-white); }
 
-    /* ========================================
-       الفوتر
-       ======================================== */
     .footer {
       padding:60px 24px 30px; border-top:1px solid var(--apple-border);
       position:relative; z-index:1;
@@ -859,9 +788,6 @@
     }
     .footer-bottom a { color:var(--text-secondary); }
 
-    /* ========================================
-       تجاوب
-       ======================================== */
     @media (max-width:1024px) {
       .nav { position:fixed; top:0; right:-100%; width:300px; height:100vh; background:var(--card-bg); backdrop-filter:blur(35px); flex-direction:column; padding:90px 24px; transition:right 0.35s; gap:8px; z-index:99; }
       .nav.active { right:0; }
@@ -883,10 +809,7 @@
   </style>
 </head>
 <body>
-  <!-- خلفية الوضع الفاتح -->
   <div class="bg-light"></div>
-
-  <!-- خلفية الوضع الليلي المبهرة -->
   <div class="bg-dark-aurora">
     <div class="dark-base"></div>
     <div class="dark-glow-1"></div>
@@ -907,7 +830,6 @@
     <div class="dark-vignette"></div>
   </div>
 
-  <!-- شاشة التحميل -->
   <div class="preloader" id="preloader">
     <div class="loader-container">
       <div class="loader-ring"></div>
@@ -917,7 +839,6 @@
     <p class="preloader-text">اكتشف الجزائر</p>
   </div>
 
-  <!-- أزرار عائمة -->
   <div class="floating-buttons">
     <button class="float-btn" id="themeSwitch" title="تغيير المظهر">
       <i class="fas fa-moon"></i>
@@ -927,31 +848,28 @@
     </button>
   </div>
 
-  <!-- ========================================
-       الصفحة الرئيسية
-       ======================================== -->
-  <div class="page active" id="page-home">
-    <header class="header" id="header">
-      <div class="header-inner">
-        <a href="#" class="logo" onclick="navigateTo('home')">
-          <i class="fas fa-compass"></i>
-          <span>Discover<span class="logo-dot">.</span></span>
-        </a>
-        <nav class="nav" id="mainNav">
-          <a href="#" class="nav-link active" data-page="home">الرئيسية</a>
-          <a href="#" class="nav-link" data-page="destinations">الوجهات</a>
-          <a href="#" class="nav-link" data-page="services">الخدمات</a>
-          <a href="#" class="nav-link" data-page="gallery">المعرض</a>
-          <a href="#" class="nav-link" data-page="packages">الباقات</a>
-          <a href="#" class="nav-link" data-page="contact">اتصل بنا</a>
-        </nav>
-        <div class="header-actions">
-          <button class="btn-apple btn-apple-gold" onclick="openBookingModal()">احجز الآن</button>
-          <button class="menu-toggle" id="menuToggle"><span></span><span></span></button>
-        </div>
+  <header class="header" id="globalHeader">
+    <div class="header-inner">
+      <a href="#" class="logo" onclick="navigateTo('home')">
+        <i class="fas fa-compass"></i>
+        <span>Discover<span class="logo-dot">.</span></span>
+      </a>
+      <nav class="nav" id="globalNav">
+        <a href="#" class="nav-link active" data-page="home">الرئيسية</a>
+        <a href="#" class="nav-link" data-page="destinations">الوجهات</a>
+        <a href="#" class="nav-link" data-page="services">الخدمات</a>
+        <a href="#" class="nav-link" data-page="gallery">المعرض</a>
+        <a href="#" class="nav-link" data-page="packages">الباقات</a>
+        <a href="#" class="nav-link" data-page="contact">اتصل بنا</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-apple btn-apple-gold" onclick="openBookingModal()">احجز الآن</button>
+        <button class="menu-toggle" id="menuToggle"><span></span><span></span></button>
       </div>
-    </header>
+    </div>
+  </header>
 
+  <div class="page active" id="page-home">
     <section class="hero">
       <div class="hero-content">
         <div class="hero-badge">✨ وكالة سياحية معتمدة منذ 2010</div>
@@ -1025,40 +943,70 @@
     </footer>
   </div>
 
-  <!-- ========================================
-       باقي الصفحات
-       ======================================== -->
   <div class="page" id="page-destinations">
-    <header class="header scrolled"><div class="header-inner"><a href="#" class="logo" onclick="navigateTo('home')"><i class="fas fa-compass"></i> <span>Discover<span class="logo-dot">.</span></span></a><nav class="nav"><a href="#" class="nav-link" data-page="home">الرئيسية</a><a href="#" class="nav-link active" data-page="destinations">الوجهات</a><a href="#" class="nav-link" data-page="services">الخدمات</a><a href="#" class="nav-link" data-page="gallery">المعرض</a><a href="#" class="nav-link" data-page="packages">الباقات</a><a href="#" class="nav-link" data-page="contact">اتصل بنا</a></nav><div class="header-actions"><button class="btn-apple btn-apple-gold" onclick="openBookingModal()">احجز الآن</button><button class="menu-toggle"><span></span><span></span></button></div></div></header>
-    <section class="page-content"><h1 class="page-title">أجمل <span class="text-gradient-gold">الوجهات</span></h1><p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / الوجهات</p><div class="filter-bar"><button class="filter-chip active" data-filter="all">الكل</button><button class="filter-chip" data-filter="صحراء">🏜️ صحراء</button><button class="filter-chip" data-filter="ساحلية">🏖️ ساحلية</button><button class="filter-chip" data-filter="تاريخية">🏛️ تاريخية</button></div><div class="destinations-grid" id="destinationsFullGrid"></div></section>
+    <section class="page-content">
+      <h1 class="page-title">أجمل <span class="text-gradient-gold">الوجهات</span></h1>
+      <p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / الوجهات</p>
+      <div class="filter-bar">
+        <button class="filter-chip active" data-filter="all">الكل</button>
+        <button class="filter-chip" data-filter="صحراء">🏜️ صحراء</button>
+        <button class="filter-chip" data-filter="ساحلية">🏖️ ساحلية</button>
+        <button class="filter-chip" data-filter="تاريخية">🏛️ تاريخية</button>
+      </div>
+      <div class="search-container" style="margin-bottom:30px;">
+        <div class="search-input-wrapper">
+          <i class="fas fa-search"></i>
+          <input type="text" class="search-input-field" id="destSearch" placeholder="ابحث في الوجهات..." oninput="filterDestinations(this.value)">
+        </div>
+      </div>
+      <div class="destinations-grid" id="destinationsFullGrid"></div>
+    </section>
     <footer class="footer"><div class="footer-bottom"><p>© 2025 Discover Algeria.</p></div></footer>
   </div>
 
   <div class="page" id="page-services">
-    <header class="header scrolled"><div class="header-inner"><a href="#" class="logo" onclick="navigateTo('home')"><i class="fas fa-compass"></i> <span>Discover<span class="logo-dot">.</span></span></a><nav class="nav"><a href="#" class="nav-link" data-page="home">الرئيسية</a><a href="#" class="nav-link" data-page="destinations">الوجهات</a><a href="#" class="nav-link active" data-page="services">الخدمات</a><a href="#" class="nav-link" data-page="gallery">المعرض</a><a href="#" class="nav-link" data-page="packages">الباقات</a><a href="#" class="nav-link" data-page="contact">اتصل بنا</a></nav><div class="header-actions"><button class="btn-apple btn-apple-gold" onclick="openBookingModal()">احجز الآن</button><button class="menu-toggle"><span></span><span></span></button></div></div></header>
-    <section class="page-content"><h1 class="page-title">خدماتنا <span class="text-gradient-gold">الفاخرة</span></h1><p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / الخدمات</p><div class="services-grid" id="servicesFullGrid"></div></section>
+    <section class="page-content">
+      <h1 class="page-title">خدماتنا <span class="text-gradient-gold">الفاخرة</span></h1>
+      <p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / الخدمات</p>
+      <div class="services-grid" id="servicesFullGrid"></div>
+    </section>
     <footer class="footer"><div class="footer-bottom"><p>© 2025 Discover Algeria.</p></div></footer>
   </div>
 
   <div class="page" id="page-gallery">
-    <header class="header scrolled"><div class="header-inner"><a href="#" class="logo" onclick="navigateTo('home')"><i class="fas fa-compass"></i> <span>Discover<span class="logo-dot">.</span></span></a><nav class="nav"><a href="#" class="nav-link" data-page="home">الرئيسية</a><a href="#" class="nav-link" data-page="destinations">الوجهات</a><a href="#" class="nav-link" data-page="services">الخدمات</a><a href="#" class="nav-link active" data-page="gallery">المعرض</a><a href="#" class="nav-link" data-page="packages">الباقات</a><a href="#" class="nav-link" data-page="contact">اتصل بنا</a></nav><div class="header-actions"><button class="btn-apple btn-apple-gold" onclick="openBookingModal()">احجز الآن</button><button class="menu-toggle"><span></span><span></span></button></div></div></header>
     <section class="carousel-container"><div class="carousel" id="galleryCarousel"></div></section>
     <footer class="footer"><div class="footer-bottom"><p>© 2025 Discover Algeria.</p></div></footer>
   </div>
 
   <div class="page" id="page-packages">
-    <header class="header scrolled"><div class="header-inner"><a href="#" class="logo" onclick="navigateTo('home')"><i class="fas fa-compass"></i> <span>Discover<span class="logo-dot">.</span></span></a><nav class="nav"><a href="#" class="nav-link" data-page="home">الرئيسية</a><a href="#" class="nav-link" data-page="destinations">الوجهات</a><a href="#" class="nav-link" data-page="services">الخدمات</a><a href="#" class="nav-link" data-page="gallery">المعرض</a><a href="#" class="nav-link active" data-page="packages">الباقات</a><a href="#" class="nav-link" data-page="contact">اتصل بنا</a></nav><div class="header-actions"><button class="btn-apple btn-apple-gold" onclick="openBookingModal()">احجز الآن</button><button class="menu-toggle"><span></span><span></span></button></div></div></header>
-    <section class="page-content"><h1 class="page-title">باقاتنا <span class="text-gradient-gold">الحصرية</span></h1><p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / الباقات</p><div class="packages-grid" id="packagesGrid"></div></section>
+    <section class="page-content">
+      <h1 class="page-title">باقاتنا <span class="text-gradient-gold">الحصرية</span></h1>
+      <p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / الباقات</p>
+      <div class="packages-grid" id="packagesGrid"></div>
+    </section>
     <footer class="footer"><div class="footer-bottom"><p>© 2025 Discover Algeria.</p></div></footer>
   </div>
 
   <div class="page" id="page-contact">
-    <header class="header scrolled"><div class="header-inner"><a href="#" class="logo" onclick="navigateTo('home')"><i class="fas fa-compass"></i> <span>Discover<span class="logo-dot">.</span></span></a><nav class="nav"><a href="#" class="nav-link" data-page="home">الرئيسية</a><a href="#" class="nav-link" data-page="destinations">الوجهات</a><a href="#" class="nav-link" data-page="services">الخدمات</a><a href="#" class="nav-link" data-page="gallery">المعرض</a><a href="#" class="nav-link" data-page="packages">الباقات</a><a href="#" class="nav-link active" data-page="contact">اتصل بنا</a></nav><div class="header-actions"><button class="btn-apple btn-apple-gold" onclick="openBookingModal()">احجز الآن</button><button class="menu-toggle"><span></span><span></span></button></div></div></header>
-    <section class="page-content"><h1 class="page-title">اتصل <span class="text-gradient-gold">بنا</span></h1><p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / اتصل بنا</p><div class="contact-grid"><div style="display:flex;flex-direction:column;gap:18px;"><div class="contact-card glass-card"><i class="fas fa-phone"></i><h3>الهاتف</h3><p>0550 12 34 56</p></div><div class="contact-card glass-card"><i class="fas fa-envelope"></i><h3>البريد</h3><p>explore@algeria.dz</p></div></div><form class="contact-form glass-card" id="contactForm"><div class="form-group"><label>الاسم</label><input type="text" id="contactName" class="form-input" required></div><div class="form-group"><label>البريد</label><input type="email" id="contactEmail" class="form-input" required></div><div class="form-group"><label>الرسالة</label><textarea id="contactMessage" class="form-input" rows="5" required></textarea></div><button type="submit" class="btn-apple btn-apple-primary btn-apple-lg btn-full"><i class="fas fa-paper-plane"></i> إرسال</button></form></div></section>
+    <section class="page-content">
+      <h1 class="page-title">اتصل <span class="text-gradient-gold">بنا</span></h1>
+      <p class="page-breadcrumb"><a href="#" onclick="navigateTo('home')">الرئيسية</a> / اتصل بنا</p>
+      <div class="contact-grid">
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <div class="contact-card glass-card"><i class="fas fa-phone"></i><h3>الهاتف</h3><p>0550 12 34 56</p></div>
+          <div class="contact-card glass-card"><i class="fas fa-envelope"></i><h3>البريد</h3><p>explore@algeria.dz</p></div>
+        </div>
+        <form class="contact-form glass-card" id="contactForm">
+          <div class="form-group"><label>الاسم</label><input type="text" id="contactName" class="form-input" required></div>
+          <div class="form-group"><label>البريد</label><input type="email" id="contactEmail" class="form-input" required></div>
+          <div class="form-group"><label>الرسالة</label><textarea id="contactMessage" class="form-input" rows="5" required></textarea></div>
+          <button type="submit" class="btn-apple btn-apple-primary btn-apple-lg btn-full"><i class="fas fa-paper-plane"></i> إرسال</button>
+        </form>
+      </div>
+    </section>
     <footer class="footer"><div class="footer-bottom"><p>© 2025 Discover Algeria.</p></div></footer>
   </div>
 
-  <!-- نافذة الحجز -->
   <div class="modal" id="bookingModal">
     <div class="modal-backdrop" onclick="closeBookingModal()"></div>
     <div class="modal-content glass-card">
@@ -1081,13 +1029,14 @@
     const PAGES = ['home','destinations','services','gallery','packages','contact'];
     let currentPage = 'home';
 
+    // ✅ صور متوافقة مع اسم كل وجهة بالضبط
     const destinationsData = [
       { id:1, name:'تمنراست - جبال الهقار', category:'صحراء', desc:'صحراء خلابة وتجربة تخييم فاخرة', days:'7 أيام', rating:4.9, price:'65,000 دج', img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop' },
       { id:2, name:'وهران - الباهية', category:'ساحلية', desc:'مدينة الفن والتاريخ', days:'5 أيام', rating:4.8, price:'48,000 دج', img:'https://images.unsplash.com/photo-1572252009286-268acec5ca0a?q=80&w=2070&auto=format&fit=crop' },
       { id:3, name:'بجاية - لؤلؤة المتوسط', category:'ساحلية', desc:'شواطئ فيروزية خلابة', days:'4 أيام', rating:4.7, price:'38,000 دج', img:'https://images.unsplash.com/photo-1590682680695-43b964a3ae17?q=80&w=2070&auto=format&fit=crop' },
       { id:4, name:'قسنطينة - مدينة الجسور', category:'تاريخية', desc:'جسور معلقة مذهلة', days:'3 أيام', rating:4.8, price:'32,000 دج', img:'https://images.unsplash.com/photo-1565967511849-76a60a516170?q=80&w=2071&auto=format&fit=crop' },
       { id:5, name:'تيبازة - روما الجزائر', category:'تاريخية', desc:'آثار رومانية على البحر', days:'يومين', rating:4.6, price:'18,000 دج', img:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop' },
-      { id:6, name:'جانت - واحة الطاسيلي', category:'صحراء', desc:'رسومات صخرية وثقافة الطوارق', days:'8 أيام', rating:4.9, price:'75,000 دج', img:'https://images.unsplash.com/photo-1548013143-724b4e2c5b0b?q=80&w=2076&auto=format&fit=crop' }
+      { id:6, name:'جانت - واحة الطاسيلي', category:'صحراء', desc:'رسومات صخرية وثقافة الطوارق', days:'8 أيام', rating:4.9, price:'75,000 دج', img:'https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=2076&auto=format&fit=crop' }
     ];
 
     const servicesData = [
@@ -1123,11 +1072,13 @@
       currentPage = pageName;
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.getElementById(`page-${pageName}`).classList.add('active');
-      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-      document.querySelectorAll(`.nav-link[data-page="${pageName}"]`).forEach(l => l.classList.add('active'));
+      document.querySelectorAll('#globalNav .nav-link').forEach(l => {
+        l.classList.remove('active');
+        if(l.dataset.page === pageName) l.classList.add('active');
+      });
       window.scrollTo({ top:0, behavior:'smooth' });
       initPageContent(pageName);
-      closeMobileMenu();
+      document.getElementById('globalNav').classList.remove('active');
     }
 
     function initPageContent(page) {
@@ -1138,15 +1089,26 @@
       else if(page==='packages')renderPackages();
     }
 
-    document.addEventListener('click', e => {
+    document.getElementById('globalNav').addEventListener('click', (e) => {
       const link = e.target.closest('.nav-link');
-      if(link){e.preventDefault();navigateTo(link.dataset.page);}
-      const chip = e.target.closest('.filter-chip');
-      if(chip){chip.parentElement.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));chip.classList.add('active');renderFullDestinations(chip.dataset.filter);}
+      if(link) {
+        e.preventDefault();
+        navigateTo(link.dataset.page);
+      }
     });
 
-    function closeMobileMenu(){document.querySelectorAll('.nav').forEach(n=>n.classList.remove('active'));}
-    document.getElementById('menuToggle')?.addEventListener('click',function(){this.closest('.header-inner').querySelector('.nav').classList.toggle('active');});
+    document.addEventListener('click', e => {
+      const chip = e.target.closest('.filter-chip');
+      if(chip){
+        chip.parentElement.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+        chip.classList.add('active');
+        renderFullDestinations(chip.dataset.filter);
+      }
+    });
+
+    document.getElementById('menuToggle')?.addEventListener('click', function() {
+      document.getElementById('globalNav').classList.toggle('active');
+    });
 
     function renderHomeDestinations(){
       const track=document.getElementById('destinationsTrack');
@@ -1229,34 +1191,28 @@
     document.getElementById('bookingForm')?.addEventListener('submit',function(e){e.preventDefault();if(!document.getElementById('bookName').value||!document.getElementById('bookEmail').value||!document.getElementById('bookPhone').value||!document.getElementById('bookDestination').value||!document.getElementById('departureDate').value||!document.getElementById('returnDate').value){alert('⚠️ يرجى ملء جميع الحقول');return;}document.getElementById('bookingForm').style.display='none';document.getElementById('bookingSuccess').classList.add('show');setTimeout(closeBookingModal,3500);});
     document.getElementById('contactForm')?.addEventListener('submit',function(e){e.preventDefault();const btn=this.querySelector('button[type="submit"]');btn.innerHTML='<i class="fas fa-check"></i> تم الإرسال ✓';btn.style.background='var(--success)';this.reset();setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane"></i> إرسال';btn.style.background='';},3000);});
 
-    window.addEventListener('scroll',()=>{const header=document.querySelector('#page-home .header');if(header)header.classList.toggle('scrolled',window.scrollY>50);document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none';});
+    window.addEventListener('scroll',()=>{
+      const header = document.getElementById('globalHeader');
+      if(header) header.classList.toggle('scrolled', window.scrollY > 50);
+      document.getElementById('backToTop').style.display = window.scrollY > 500 ? 'flex' : 'none';
+    });
+    
     document.getElementById('backToTop')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
-    // ✨ نظام الوضع الليلي المبهر
     let isDark = localStorage.getItem('darkMode') === 'enabled';
     if(isDark) document.body.classList.add('dark-mode');
-    
     const themeSwitch = document.getElementById('themeSwitch');
     const themeIcon = themeSwitch?.querySelector('i');
-    
-    // تحديث أيقونة الزر عند التحميل
-    if(isDark) {
-      themeIcon.className = 'fas fa-sun';
-    }
-    
+    if(isDark) themeIcon.className = 'fas fa-sun';
     themeSwitch?.addEventListener('click', () => {
       isDark = !isDark;
       document.body.classList.toggle('dark-mode', isDark);
       localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
-      
-      // تغيير الأيقونة مع تأثير
       themeIcon.style.transform = 'scale(0)';
       setTimeout(() => {
         themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
         themeIcon.style.transform = 'scale(1)';
       }, 200);
-      
-      // تأثير انتقالي على الصفحة
       document.body.style.transition = 'all 0.5s ease';
     });
 
@@ -1270,7 +1226,7 @@
     });
     
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBookingModal();});
-    console.log('✨ Discover Algeria - الوضع الليلي المبهر');
+    console.log('✅ Discover Algeria - تم تحديث جميع الصور حسب أسماء الوجهات');
   </script>
 </body>
 </html>
